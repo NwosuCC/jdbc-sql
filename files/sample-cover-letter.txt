@@ -1,892 +1,528 @@
-20190717 - 1
-
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-Last login: Wed Jul 17 16:38:28 on ttys000
-Deciano:~ cypriannwosu$ node --version
--bash: node: command not found
-Deciano:~ cypriannwosu$ brew install node
-Updating Homebrew...
-==> Installing dependencies for node: icu4c
-==> Installing node dependency: icu4c
-==> Downloading https://homebrew.bintray.com/bottles/icu4c-64.2.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/e8/e858556120acc0c2d52b8fb572b677856724cc28d24a7e1b2
-######################################################################## 100.0%
-==> Pouring icu4c-64.2.mojave.bottle.tar.gz
-==> Caveats
-icu4c is keg-only, which means it was not symlinked into /usr/local,
-because macOS provides libicucore.dylib (but nothing else).
-
-If you need to have icu4c first in your PATH run:
-  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.bash_profile
-  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.bash_profile
-
-For compilers to find icu4c you may need to set:
-  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
-  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
-
-==> Summary
-🍺  /usr/local/Cellar/icu4c/64.2: 257 files, 69.2MB
-==> Installing node
-==> Downloading https://homebrew.bintray.com/bottles/node-12.6.0.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/0e/0e41a4bbf4ca3a05377d864e3d462ddb139c2560780627307
-######################################################################## 100.0%
-==> Pouring node-12.6.0.mojave.bottle.tar.gz
-==> Caveats
-Bash completion has been installed to:
-  /usr/local/etc/bash_completion.d
-==> Summary
-🍺  /usr/local/Cellar/node/12.6.0: 4,515 files, 53.0MB
-==> `brew cleanup` has not been run in 30 days, running now...
-==> Caveats
-==> icu4c
-icu4c is keg-only, which means it was not symlinked into /usr/local,
-because macOS provides libicucore.dylib (but nothing else).
-
-If you need to have icu4c first in your PATH run:
-  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.bash_profile
-  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.bash_profile
-
-For compilers to find icu4c you may need to set:
-  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
-  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
-
-==> node
-Bash completion has been installed to:
-  /usr/local/etc/bash_completion.d
-Deciano:~ cypriannwosu$ node --version
-v12.6.0
-Deciano:~ cypriannwosu$ npm --version
-6.9.0
-Deciano:~ cypriannwosu$ git --version
-git version 2.20.1 (Apple Git-117)
-Deciano:~ cypriannwosu$ brew update && brew upgrade && brew cleanup && brew doctor
-Already up-to-date.
-Your system is ready to brew.
-Deciano:~ cypriannwosu$ composer
--bash: composer: command not found
-Deciano:~ cypriannwosu$ brew install composer
-Updating Homebrew...
-==> Downloading https://getcomposer.org/download/1.8.6/composer.phar
-######################################################################## 100.0%
-🍺  /usr/local/Cellar/composer/1.8.6: 3 files, 1.8MB, built in 8 seconds
-Deciano:~ cypriannwosu$ composer -v
-   ______
-  / ____/___  ____ ___  ____  ____  ________  _____
- / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
-/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
-\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
-                    /_/
-Composer version 1.8.6 2019-06-11 15:03:05
-
-Usage:
-  command [options] [arguments]
-
-Options:
-  -h, --help                     Display this help message
-  -q, --quiet                    Do not output any message
-  -V, --version                  Display this application version
-      --ansi                     Force ANSI output
-      --no-ansi                  Disable ANSI output
-  -n, --no-interaction           Do not ask any interactive question
-      --profile                  Display timing and memory usage information
-      --no-plugins               Whether to disable plugins.
-  -d, --working-dir=WORKING-DIR  If specified, use the given directory as working directory.
-  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
-
-Available commands:
-  about                Shows the short information about Composer.
-  archive              Creates an archive of this composer package.
-  browse               Opens the package's repository URL or homepage in your browser.
-  check-platform-reqs  Check that platform requirements are satisfied.
-  clear-cache          Clears composer's internal package cache.
-  clearcache           Clears composer's internal package cache.
-  config               Sets config options.
-  create-project       Creates new project from a package into given directory.
-  depends              Shows which packages cause the given package to be installed.
-  diagnose             Diagnoses the system to identify common errors.
-  dump-autoload        Dumps the autoloader.
-  dumpautoload         Dumps the autoloader.
-  exec                 Executes a vendored binary/script.
-  global               Allows running commands in the global composer dir ($COMPOSER_HOME).
-  help                 Displays help for a command
-  home                 Opens the package's repository URL or homepage in your browser.
-  i                    Installs the project dependencies from the composer.lock file if present, or falls back on the composer.json.
-  info                 Shows information about packages.
-  init                 Creates a basic composer.json file in current directory.
-  install              Installs the project dependencies from the composer.lock file if present, or falls back on the composer.json.
-  licenses             Shows information about licenses of dependencies.
-  list                 Lists commands
-  outdated             Shows a list of installed packages that have updates available, including their latest version.
-  prohibits            Shows which packages prevent the given package from being installed.
-  remove               Removes a package from the require or require-dev.
-  require              Adds required packages to your composer.json and installs them.
-  run-script           Runs the scripts defined in composer.json.
-  search               Searches for packages.
-  self-update          Updates composer.phar to the latest version.
-  selfupdate           Updates composer.phar to the latest version.
-  show                 Shows information about packages.
-  status               Shows a list of locally modified packages, for packages installed from source.
-  suggests             Shows package suggestions.
-  u                    Upgrades your dependencies to the latest version according to composer.json, and updates the composer.lock file.
-  update               Upgrades your dependencies to the latest version according to composer.json, and updates the composer.lock file.
-  upgrade              Upgrades your dependencies to the latest version according to composer.json, and updates the composer.lock file.
-  validate             Validates a composer.json and composer.lock.
-  why                  Shows which packages cause the given package to be installed.
-  why-not              Shows which packages prevent the given package from being installed.
-Deciano:~ cypriannwosu$ composer --version
-Composer version 1.8.6 2019-06-11 15:03:05
-Deciano:~ cypriannwosu$ brew install php
-==> Installing dependencies for php: apr, openssl, apr-util, argon2, aspell, autoconf, brotli, c-ares, libidn, libmetalink, libssh2, jansson, jemalloc, libev, libevent, nghttp2, openldap, rtmpdump, curl-openssl, libtool, unixodbc, freetds, libpng, freetype, gettext, libffi, pcre, gdbm, readline, sqlite, xz, python, glib, gmp, jpeg, libpq, libsodium, libzip, tidy-html5, libtiff and webp
-==> Installing php dependency: apr
-==> Downloading https://homebrew.bintray.com/bottles/apr-1.7.0.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/3a/3a245185ed7280d1a19e7c639786b4c21dd0088878be8ac87
-######################################################################## 100.0%
-==> Pouring apr-1.7.0.mojave.bottle.tar.gz
-==> Caveats
-apr is keg-only, which means it was not symlinked into /usr/local,
-because Apple's CLT package contains apr.
-
-If you need to have apr first in your PATH run:
-  echo 'export PATH="/usr/local/opt/apr/bin:$PATH"' >> ~/.bash_profile
-
-==> Summary
-🍺  /usr/local/Cellar/apr/1.7.0: 59 files, 1.4MB
-==> Installing php dependency: openssl
-==> Downloading https://homebrew.bintray.com/bottles/openssl-1.0.2s.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/c4/c4a762d719c2be74ac686f1aafabb32f3c5d5ff3a98935c49
-######################################################################## 100.0%
-==> Pouring openssl-1.0.2s.mojave.bottle.tar.gz
-==> Caveats
-A CA file has been bootstrapped using certificates from the SystemRoots
-keychain. To add additional certificates (e.g. the certificates added in
-the System keychain), place .pem files in
-  /usr/local/etc/openssl/certs
-
-and run
-  /usr/local/opt/openssl/bin/c_rehash
-
-openssl is keg-only, which means it was not symlinked into /usr/local,
-because Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries.
-
-If you need to have openssl first in your PATH run:
-  echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.bash_profile
-
-For compilers to find openssl you may need to set:
-  export LDFLAGS="-L/usr/local/opt/openssl/lib"
-  export CPPFLAGS="-I/usr/local/opt/openssl/include"
-
-==> Summary
-🍺  /usr/local/Cellar/openssl/1.0.2s: 1,795 files, 12.0MB
-==> Installing php dependency: apr-util
-==> Downloading https://homebrew.bintray.com/bottles/apr-util-1.6.1_1.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/e4/e4927892e16a3c9cf0d037c1777a6e5728fef2f5abfbc0af3
-######################################################################## 100.0%
-==> Pouring apr-util-1.6.1_1.mojave.bottle.tar.gz
-==> Caveats
-apr-util is keg-only, which means it was not symlinked into /usr/local,
-because Apple's CLT package contains apr.
-
-If you need to have apr-util first in your PATH run:
-  echo 'export PATH="/usr/local/opt/apr-util/bin:$PATH"' >> ~/.bash_profile
-
-==> Summary
-🍺  /usr/local/Cellar/apr-util/1.6.1_1: 54 files, 777.5KB
-==> Installing php dependency: argon2
-==> Downloading https://homebrew.bintray.com/bottles/argon2-20190702_1.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/a7/a76192a41826619fc399e7f6de5e6cb1c8a5fbe6bea4f2c15
-######################################################################## 100.0%
-==> Pouring argon2-20190702_1.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/argon2/20190702_1: 12 files, 591KB
-==> Installing php dependency: aspell
-==> Downloading https://homebrew.bintray.com/bottles/aspell-0.60.6.1_1.mojave.bottle.1.tar.gz
-==> Downloading from https://akamai.bintray.com/ff/ff90482e98d4185c02676885cb9295f2e2c3fc0a59173981f
-######################################################################## 100.0%
-==> Pouring aspell-0.60.6.1_1.mojave.bottle.1.tar.gz
-🍺  /usr/local/Cellar/aspell/0.60.6.1_1: 758 files, 314.8MB
-==> Installing php dependency: autoconf
-==> Downloading https://homebrew.bintray.com/bottles/autoconf-2.69.mojave.bottle.4.tar.gz
-==> Downloading from https://akamai.bintray.com/97/9724736d34773b6e41e2434ffa28fe79feccccf7b7786e546
-######################################################################## 100.0%
-==> Pouring autoconf-2.69.mojave.bottle.4.tar.gz
-==> Caveats
-Emacs Lisp files have been installed to:
-  /usr/local/share/emacs/site-lisp/autoconf
-==> Summary
-🍺  /usr/local/Cellar/autoconf/2.69: 71 files, 3.0MB
-==> Installing php dependency: brotli
-==> Downloading https://homebrew.bintray.com/bottles/brotli-1.0.7.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/d2/d2d4f821f8d9c52de15a4d3b5ddeab760ad9ae71105f1c859
-######################################################################## 100.0%
-==> Pouring brotli-1.0.7.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/brotli/1.0.7: 25 files, 2.2MB
-==> Installing php dependency: c-ares
-==> Downloading https://homebrew.bintray.com/bottles/c-ares-1.15.0.mojave.bottle.tar.gz
-######################################################################## 100.0%
-==> Pouring c-ares-1.15.0.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/c-ares/1.15.0: 72 files, 482.6KB
-==> Installing php dependency: libidn
-==> Downloading https://homebrew.bintray.com/bottles/libidn-1.35.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/d3/d3741facdecc039b53d64392b6f8f4377a01d38bd0ce388db
-######################################################################## 100.0%
-==> Pouring libidn-1.35.mojave.bottle.tar.gz
-==> Caveats
-Emacs Lisp files have been installed to:
-  /usr/local/share/emacs/site-lisp/libidn
-==> Summary
-🍺  /usr/local/Cellar/libidn/1.35: 72 files, 1.4MB
-==> Installing php dependency: libmetalink
-==> Downloading https://homebrew.bintray.com/bottles/libmetalink-0.1.3.mojave.bottle.tar.gz
-######################################################################## 100.0%
-==> Pouring libmetalink-0.1.3.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/libmetalink/0.1.3: 31 files, 178.9KB
-==> Installing php dependency: libssh2
-==> Downloading https://homebrew.bintray.com/bottles/libssh2-1.9.0.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/02/0226917e00c2f5c003c441c11d06852d582cd6ddcb42042bf
-######################################################################## 100.0%
-==> Pouring libssh2-1.9.0.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/libssh2/1.9.0: 184 files, 911.9KB
-==> Installing php dependency: jansson
-==> Downloading https://homebrew.bintray.com/bottles/jansson-2.12.mojave.bottle.tar.gz
-######################################################################## 100.0%
-==> Pouring jansson-2.12.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/jansson/2.12: 11 files, 157.5KB
-==> Installing php dependency: jemalloc
-==> Downloading https://homebrew.bintray.com/bottles/jemalloc-5.2.0.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/65/65f360353caa81de08b1b1882de13e8423d0f72d92a67bb3a
-######################################################################## 100.0%
-==> Pouring jemalloc-5.2.0.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/jemalloc/5.2.0: 16 files, 1.9MB
-==> Installing php dependency: libev
-==> Downloading https://homebrew.bintray.com/bottles/libev-4.27.mojave.bottle.tar.gz
-######################################################################## 100.0%
-==> Pouring libev-4.27.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/libev/4.27: 12 files, 438.6KB
-==> Installing php dependency: libevent
-==> Downloading https://homebrew.bintray.com/bottles/libevent-2.1.10.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/3f/3f43999f92de5174fa646e00cb0998801af4865b0274ebf6c
-######################################################################## 100.0%
-==> Pouring libevent-2.1.10.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/libevent/2.1.10: 857 files, 2.2MB
-==> Installing php dependency: nghttp2
-==> Downloading https://homebrew.bintray.com/bottles/nghttp2-1.39.1.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/92/927d1c581966fc68c3c69c4a165b3f406d83fa1048dd870d6
-######################################################################## 100.0%
-==> Pouring nghttp2-1.39.1.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/nghttp2/1.39.1: 26 files, 2.6MB
-==> Installing php dependency: openldap
-==> Downloading https://homebrew.bintray.com/bottles/openldap-2.4.47.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/07/07e1f0e3ec1a02340a82259e1ace713cfb362126404575032
-######################################################################## 100.0%
-==> Pouring openldap-2.4.47.mojave.bottle.tar.gz
-==> Caveats
-openldap is keg-only, which means it was not symlinked into /usr/local,
-because macOS already provides this software and installing another version in
-parallel can cause all kinds of trouble.
-
-If you need to have openldap first in your PATH run:
-  echo 'export PATH="/usr/local/opt/openldap/bin:$PATH"' >> ~/.bash_profile
-  echo 'export PATH="/usr/local/opt/openldap/sbin:$PATH"' >> ~/.bash_profile
-
-For compilers to find openldap you may need to set:
-  export LDFLAGS="-L/usr/local/opt/openldap/lib"
-  export CPPFLAGS="-I/usr/local/opt/openldap/include"
-
-==> Summary
-🍺  /usr/local/Cellar/openldap/2.4.47: 327 files, 6.5MB
-==> Installing php dependency: rtmpdump
-==> Downloading https://homebrew.bintray.com/bottles/rtmpdump-2.4+20151223.mojave.bottle.tar.gz
-######################################################################## 100.0%
-==> Pouring rtmpdump-2.4+20151223.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/rtmpdump/2.4+20151223: 20 files, 418.5KB
-==> Installing php dependency: curl-openssl
-==> Downloading https://homebrew.bintray.com/bottles/curl-openssl-7.65.2.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/e5/e5c37bd7de02bbf8e493314b7efd2d3581e594640e6757cc0
-######################################################################## 100.0%
-==> Pouring curl-openssl-7.65.2.mojave.bottle.tar.gz
-==> Caveats
-curl-openssl is keg-only, which means it was not symlinked into /usr/local,
-because macOS already provides this software and installing another version in
-parallel can cause all kinds of trouble.
-
-If you need to have curl-openssl first in your PATH run:
-  echo 'export PATH="/usr/local/opt/curl-openssl/bin:$PATH"' >> ~/.bash_profile
-
-For compilers to find curl-openssl you may need to set:
-  export LDFLAGS="-L/usr/local/opt/curl-openssl/lib"
-  export CPPFLAGS="-I/usr/local/opt/curl-openssl/include"
-
-==> Summary
-🍺  /usr/local/Cellar/curl-openssl/7.65.2: 451 files, 3.4MB
-==> Installing php dependency: libtool
-==> Downloading https://homebrew.bintray.com/bottles/libtool-2.4.6_1.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/c9/c92ab35c3706c255a36b733aa7a475159da9cf375c275d230
-######################################################################## 100.0%
-==> Pouring libtool-2.4.6_1.mojave.bottle.tar.gz
-==> Caveats
-In order to prevent conflicts with Apple's own libtool we have prepended a "g"
-so, you have instead: glibtool and glibtoolize.
-==> Summary
-🍺  /usr/local/Cellar/libtool/2.4.6_1: 71 files, 3.7MB
-==> Installing php dependency: unixodbc
-==> Downloading https://homebrew.bintray.com/bottles/unixodbc-2.3.7.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/c4/c4f375c528496bae444824f4d01922e31a9a8b0c6822cd97d
-######################################################################## 100.0%
-==> Pouring unixodbc-2.3.7.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/unixodbc/2.3.7: 46 files, 1.8MB
-==> Installing php dependency: freetds
-==> Downloading https://homebrew.bintray.com/bottles/freetds-1.1.6.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/50/501fc03b7af71fdc7dba603c95d7db725c55c09e384947b16
-######################################################################## 100.0%
-==> Pouring freetds-1.1.6.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/freetds/1.1.6: 2,141 files, 13.1MB
-==> Installing php dependency: libpng
-==> Downloading https://homebrew.bintray.com/bottles/libpng-1.6.37.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/53/53bbd14cc27c86c16605e256e7646a1b5656c253abca08495
-######################################################################## 100.0%
-==> Pouring libpng-1.6.37.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/libpng/1.6.37: 27 files, 1.2MB
-==> Installing php dependency: freetype
-==> Downloading https://homebrew.bintray.com/bottles/freetype-2.10.1.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/2f/2f5716f987df6f45a9d66e5f9af935bbb4202fe0b9850b6b0
-######################################################################## 100.0%
-==> Pouring freetype-2.10.1.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/freetype/2.10.1: 61 files, 2.2MB
-==> Installing php dependency: gettext
-==> Downloading https://homebrew.bintray.com/bottles/gettext-0.20.1.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/fa/fa2096f80238b8f4d9f3724d526626ab4db5c0586f3746ee1
-######################################################################## 100.0%
-==> Pouring gettext-0.20.1.mojave.bottle.tar.gz
-==> Caveats
-gettext is keg-only, which means it was not symlinked into /usr/local,
-because macOS provides the BSD gettext library & some software gets confused if both are in the library path.
-
-If you need to have gettext first in your PATH run:
-  echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> ~/.bash_profile
-
-For compilers to find gettext you may need to set:
-  export LDFLAGS="-L/usr/local/opt/gettext/lib"
-  export CPPFLAGS="-I/usr/local/opt/gettext/include"
-
-==> Summary
-🍺  /usr/local/Cellar/gettext/0.20.1: 1,899 files, 18.5MB
-==> Installing php dependency: libffi
-==> Downloading https://homebrew.bintray.com/bottles/libffi-3.2.1.mojave.bottle.tar.gz
-######################################################################## 100.0%
-==> Pouring libffi-3.2.1.mojave.bottle.tar.gz
-==> Caveats
-libffi is keg-only, which means it was not symlinked into /usr/local,
-because some formulae require a newer version of libffi.
-
-For compilers to find libffi you may need to set:
-  export LDFLAGS="-L/usr/local/opt/libffi/lib"
-
-==> Summary
-🍺  /usr/local/Cellar/libffi/3.2.1: 16 files, 296.8KB
-==> Installing php dependency: pcre
-==> Downloading https://homebrew.bintray.com/bottles/pcre-8.43.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/08/08e7414a7641d1e184c936537ff67f72f52649374d2308b89
-######################################################################## 100.0%
-==> Pouring pcre-8.43.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/pcre/8.43: 204 files, 5.5MB
-==> Installing php dependency: gdbm
-==> Downloading https://homebrew.bintray.com/bottles/gdbm-1.18.1.mojave.bottle.1.tar.gz
-######################################################################## 100.0%
-==> Pouring gdbm-1.18.1.mojave.bottle.1.tar.gz
-🍺  /usr/local/Cellar/gdbm/1.18.1: 20 files, 586.8KB
-==> Installing php dependency: readline
-==> Downloading https://homebrew.bintray.com/bottles/readline-8.0.0_1.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/fa/faab004773e6449dd97971311cb62a9bbaa44f1483b82640e
-######################################################################## 100.0%
-==> Pouring readline-8.0.0_1.mojave.bottle.tar.gz
-==> Caveats
-readline is keg-only, which means it was not symlinked into /usr/local,
-because macOS provides the BSD libedit library, which shadows libreadline.
-In order to prevent conflicts when programs look for libreadline we are
-defaulting this GNU Readline installation to keg-only.
-
-For compilers to find readline you may need to set:
-  export LDFLAGS="-L/usr/local/opt/readline/lib"
-  export CPPFLAGS="-I/usr/local/opt/readline/include"
-
-==> Summary
-🍺  /usr/local/Cellar/readline/8.0.0_1: 48 files, 1.5MB
-==> Installing php dependency: sqlite
-==> Downloading https://homebrew.bintray.com/bottles/sqlite-3.28.0.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/e3/e360850758d2104b4ae9eab8ae57903a37b62c550c779ddf3
-######################################################################## 100.0%
-==> Pouring sqlite-3.28.0.mojave.bottle.tar.gz
-==> Caveats
-sqlite is keg-only, which means it was not symlinked into /usr/local,
-because macOS provides an older sqlite3.
-
-If you need to have sqlite first in your PATH run:
-  echo 'export PATH="/usr/local/opt/sqlite/bin:$PATH"' >> ~/.bash_profile
-
-For compilers to find sqlite you may need to set:
-  export LDFLAGS="-L/usr/local/opt/sqlite/lib"
-  export CPPFLAGS="-I/usr/local/opt/sqlite/include"
-
-==> Summary
-🍺  /usr/local/Cellar/sqlite/3.28.0: 11 files, 3.7MB
-==> Installing php dependency: xz
-==> Downloading https://homebrew.bintray.com/bottles/xz-5.2.4.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/01/010667293df282c8bceede3bcd36953dd57c56cef608d09a5
-######################################################################## 100.0%
-==> Pouring xz-5.2.4.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/xz/5.2.4: 92 files, 1MB
-==> Installing php dependency: python
-==> Downloading https://homebrew.bintray.com/bottles/python-3.7.4.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/81/81fc6e5914a16387bd09387ce08e99122ea3ad65c55ded42e
-######################################################################## 100.0%
-==> Pouring python-3.7.4.mojave.bottle.tar.gz
-==> /usr/local/Cellar/python/3.7.4/bin/python3 -s setup.py --no-user-cfg install --force --verbose -
-==> /usr/local/Cellar/python/3.7.4/bin/python3 -s setup.py --no-user-cfg install --force --verbose -
-==> /usr/local/Cellar/python/3.7.4/bin/python3 -s setup.py --no-user-cfg install --force --verbose -
-==> Caveats
-Python has been installed as
-  /usr/local/bin/python3
-
-Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
-`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
-  /usr/local/opt/python/libexec/bin
-
-If you need Homebrew's Python 2.7 run
-  brew install python@2
-
-You can install Python packages with
-  pip3 install <package>
-They will install into the site-package directory
-  /usr/local/lib/python3.7/site-packages
-
-See: https://docs.brew.sh/Homebrew-and-Python
-==> Summary
-🍺  /usr/local/Cellar/python/3.7.4: 3,865 files, 60MB
-==> Installing php dependency: glib
-==> Downloading https://homebrew.bintray.com/bottles/glib-2.60.5.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/1f/1fa43a8867d3d92d43d6921c8e04da706983bf423eebd08b1
-######################################################################## 100.0%
-==> Pouring glib-2.60.5.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/glib/2.60.5: 429 files, 15.2MB
-==> Installing php dependency: gmp
-==> Downloading https://homebrew.bintray.com/bottles/gmp-6.1.2_2.mojave.bottle.1.tar.gz
-==> Downloading from https://akamai.bintray.com/84/84f74594086bccc53bdb141f4d06d7847680374e255ebe016
-######################################################################## 100.0%
-==> Pouring gmp-6.1.2_2.mojave.bottle.1.tar.gz
-🍺  /usr/local/Cellar/gmp/6.1.2_2: 18 files, 3.1MB
-==> Installing php dependency: jpeg
-==> Downloading https://homebrew.bintray.com/bottles/jpeg-9c.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/1d/1daa0fc0c197d96dd4e1afddb9ad576951a15aafd6b85138b
-######################################################################## 100.0%
-==> Pouring jpeg-9c.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/jpeg/9c: 21 files, 733.4KB
-==> Installing php dependency: libpq
-==> Downloading https://homebrew.bintray.com/bottles/libpq-11.3.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/46/464e74593da2d7b8c9375d74346e7d6216c61d0d37359e78d
-######################################################################## 100.0%
-==> Pouring libpq-11.3.mojave.bottle.tar.gz
-==> Caveats
-libpq is keg-only, which means it was not symlinked into /usr/local,
-because conflicts with postgres formula.
-
-If you need to have libpq first in your PATH run:
-  echo 'export PATH="/usr/local/opt/libpq/bin:$PATH"' >> ~/.bash_profile
-
-For compilers to find libpq you may need to set:
-  export LDFLAGS="-L/usr/local/opt/libpq/lib"
-  export CPPFLAGS="-I/usr/local/opt/libpq/include"
-
-==> Summary
-🍺  /usr/local/Cellar/libpq/11.3: 2,205 files, 22.4MB
-==> Installing php dependency: libsodium
-==> Downloading https://homebrew.bintray.com/bottles/libsodium-1.0.18.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/f0/f0c5a9db15c8798edfa438b6911c6e354591f22ae3ed53696
-######################################################################## 100.0%
-==> Pouring libsodium-1.0.18.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/libsodium/1.0.18: 73 files, 1009.3KB
-==> Installing php dependency: libzip
-==> Downloading https://homebrew.bintray.com/bottles/libzip-1.5.2.mojave.bottle.tar.gz
-######################################################################## 100.0%
-==> Pouring libzip-1.5.2.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/libzip/1.5.2: 134 files, 579.6KB
-==> Installing php dependency: tidy-html5
-==> Downloading https://homebrew.bintray.com/bottles/tidy-html5-5.6.0.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/bd/bd3ca7dc82a913c8576716cbcc957260251132f6dd7b8c526
-######################################################################## 100.0%
-==> Pouring tidy-html5-5.6.0.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/tidy-html5/5.6.0: 14 files, 2.6MB
-==> Installing php dependency: libtiff
-==> Downloading https://homebrew.bintray.com/bottles/libtiff-4.0.10_1.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/6e/6ecdca6159e5e4db0ec0fcbddbc76dbdc65e496139b131a05
-######################################################################## 100.0%
-==> Pouring libtiff-4.0.10_1.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/libtiff/4.0.10_1: 246 files, 3.5MB
-==> Installing php dependency: webp
-==> Downloading https://homebrew.bintray.com/bottles/webp-1.0.3.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/34/347c02d4de7afe9e5e73391d293a19f89d40957fafd757656
-######################################################################## 100.0%
-==> Pouring webp-1.0.3.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/webp/1.0.3: 39 files, 2.1MB
-==> Installing php
-==> Downloading https://homebrew.bintray.com/bottles/php-7.3.7.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/c8/c8ed5f512b34d4cd4082aaea40143ba8b198d8b8372b8d53a
-######################################################################## 100.0%
-==> Pouring php-7.3.7.mojave.bottle.tar.gz
-==> /usr/local/Cellar/php/7.3.7/bin/pear config-set php_ini /usr/local/etc/php/7.3/php.ini system
-==> /usr/local/Cellar/php/7.3.7/bin/pear config-set php_dir /usr/local/share/pear system
-==> /usr/local/Cellar/php/7.3.7/bin/pear config-set doc_dir /usr/local/share/pear/doc system
-==> /usr/local/Cellar/php/7.3.7/bin/pear config-set ext_dir /usr/local/lib/php/pecl/20180731 system
-==> /usr/local/Cellar/php/7.3.7/bin/pear config-set bin_dir /usr/local/opt/php/bin system
-==> /usr/local/Cellar/php/7.3.7/bin/pear config-set data_dir /usr/local/share/pear/data system
-==> /usr/local/Cellar/php/7.3.7/bin/pear config-set cfg_dir /usr/local/share/pear/cfg system
-==> /usr/local/Cellar/php/7.3.7/bin/pear config-set www_dir /usr/local/share/pear/htdocs system
-==> /usr/local/Cellar/php/7.3.7/bin/pear config-set man_dir /usr/local/share/man system
-==> /usr/local/Cellar/php/7.3.7/bin/pear config-set test_dir /usr/local/share/pear/test system
-==> /usr/local/Cellar/php/7.3.7/bin/pear config-set php_bin /usr/local/opt/php/bin/php system
-==> /usr/local/Cellar/php/7.3.7/bin/pear update-channels
-==> Caveats
-To enable PHP in Apache add the following to httpd.conf and restart Apache:
-    LoadModule php7_module /usr/local/opt/php/lib/httpd/modules/libphp7.so
-
-    <FilesMatch \.php$>
-        SetHandler application/x-httpd-php
-    </FilesMatch>
-
-Finally, check DirectoryIndex includes index.php
-    DirectoryIndex index.php index.html
-
-The php.ini and php-fpm.ini file can be found in:
-    /usr/local/etc/php/7.3/
-
-To have launchd start php now and restart at login:
-  brew services start php
-Or, if you don't want/need a background service you can just run:
-  php-fpm
-==> Summary
-🍺  /usr/local/Cellar/php/7.3.7: 521 files, 77.0MB
-==> Caveats
-==> apr
-apr is keg-only, which means it was not symlinked into /usr/local,
-because Apple's CLT package contains apr.
-
-If you need to have apr first in your PATH run:
-  echo 'export PATH="/usr/local/opt/apr/bin:$PATH"' >> ~/.bash_profile
-
-==> openssl
-A CA file has been bootstrapped using certificates from the SystemRoots
-keychain. To add additional certificates (e.g. the certificates added in
-the System keychain), place .pem files in
-  /usr/local/etc/openssl/certs
-
-and run
-  /usr/local/opt/openssl/bin/c_rehash
-
-openssl is keg-only, which means it was not symlinked into /usr/local,
-because Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries.
-
-If you need to have openssl first in your PATH run:
-  echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.bash_profile
-
-For compilers to find openssl you may need to set:
-  export LDFLAGS="-L/usr/local/opt/openssl/lib"
-  export CPPFLAGS="-I/usr/local/opt/openssl/include"
-
-==> apr-util
-apr-util is keg-only, which means it was not symlinked into /usr/local,
-because Apple's CLT package contains apr.
-
-If you need to have apr-util first in your PATH run:
-  echo 'export PATH="/usr/local/opt/apr-util/bin:$PATH"' >> ~/.bash_profile
-
-==> autoconf
-Emacs Lisp files have been installed to:
-  /usr/local/share/emacs/site-lisp/autoconf
-==> libidn
-Emacs Lisp files have been installed to:
-  /usr/local/share/emacs/site-lisp/libidn
-==> openldap
-openldap is keg-only, which means it was not symlinked into /usr/local,
-because macOS already provides this software and installing another version in
-parallel can cause all kinds of trouble.
-
-If you need to have openldap first in your PATH run:
-  echo 'export PATH="/usr/local/opt/openldap/bin:$PATH"' >> ~/.bash_profile
-  echo 'export PATH="/usr/local/opt/openldap/sbin:$PATH"' >> ~/.bash_profile
-
-For compilers to find openldap you may need to set:
-  export LDFLAGS="-L/usr/local/opt/openldap/lib"
-  export CPPFLAGS="-I/usr/local/opt/openldap/include"
-
-==> curl-openssl
-curl-openssl is keg-only, which means it was not symlinked into /usr/local,
-because macOS already provides this software and installing another version in
-parallel can cause all kinds of trouble.
-
-If you need to have curl-openssl first in your PATH run:
-  echo 'export PATH="/usr/local/opt/curl-openssl/bin:$PATH"' >> ~/.bash_profile
-
-For compilers to find curl-openssl you may need to set:
-  export LDFLAGS="-L/usr/local/opt/curl-openssl/lib"
-  export CPPFLAGS="-I/usr/local/opt/curl-openssl/include"
-
-==> libtool
-In order to prevent conflicts with Apple's own libtool we have prepended a "g"
-so, you have instead: glibtool and glibtoolize.
-==> gettext
-gettext is keg-only, which means it was not symlinked into /usr/local,
-because macOS provides the BSD gettext library & some software gets confused if both are in the library path.
-
-If you need to have gettext first in your PATH run:
-  echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> ~/.bash_profile
-
-For compilers to find gettext you may need to set:
-  export LDFLAGS="-L/usr/local/opt/gettext/lib"
-  export CPPFLAGS="-I/usr/local/opt/gettext/include"
-
-==> libffi
-libffi is keg-only, which means it was not symlinked into /usr/local,
-because some formulae require a newer version of libffi.
-
-For compilers to find libffi you may need to set:
-  export LDFLAGS="-L/usr/local/opt/libffi/lib"
-
-==> readline
-readline is keg-only, which means it was not symlinked into /usr/local,
-because macOS provides the BSD libedit library, which shadows libreadline.
-In order to prevent conflicts when programs look for libreadline we are
-defaulting this GNU Readline installation to keg-only.
-
-For compilers to find readline you may need to set:
-  export LDFLAGS="-L/usr/local/opt/readline/lib"
-  export CPPFLAGS="-I/usr/local/opt/readline/include"
-
-==> sqlite
-sqlite is keg-only, which means it was not symlinked into /usr/local,
-because macOS provides an older sqlite3.
-
-If you need to have sqlite first in your PATH run:
-  echo 'export PATH="/usr/local/opt/sqlite/bin:$PATH"' >> ~/.bash_profile
-
-For compilers to find sqlite you may need to set:
-  export LDFLAGS="-L/usr/local/opt/sqlite/lib"
-  export CPPFLAGS="-I/usr/local/opt/sqlite/include"
-
-==> python
-Python has been installed as
-  /usr/local/bin/python3
-
-Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
-`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
-  /usr/local/opt/python/libexec/bin
-
-If you need Homebrew's Python 2.7 run
-  brew install python@2
-
-You can install Python packages with
-  pip3 install <package>
-They will install into the site-package directory
-  /usr/local/lib/python3.7/site-packages
-
-See: https://docs.brew.sh/Homebrew-and-Python
-==> libpq
-libpq is keg-only, which means it was not symlinked into /usr/local,
-because conflicts with postgres formula.
-
-If you need to have libpq first in your PATH run:
-  echo 'export PATH="/usr/local/opt/libpq/bin:$PATH"' >> ~/.bash_profile
-
-For compilers to find libpq you may need to set:
-  export LDFLAGS="-L/usr/local/opt/libpq/lib"
-  export CPPFLAGS="-I/usr/local/opt/libpq/include"
-
-==> php
-To enable PHP in Apache add the following to httpd.conf and restart Apache:
-    LoadModule php7_module /usr/local/opt/php/lib/httpd/modules/libphp7.so
-
-    <FilesMatch \.php$>
-        SetHandler application/x-httpd-php
-    </FilesMatch>
-
-Finally, check DirectoryIndex includes index.php
-    DirectoryIndex index.php index.html
-
-The php.ini and php-fpm.ini file can be found in:
-    /usr/local/etc/php/7.3/
-
-To have launchd start php now and restart at login:
-  brew services start php
-Or, if you don't want/need a background service you can just run:
-  php-fpm
-Deciano:~ cypriannwosu$ brew install composer
-Warning: composer 1.8.6 is already installed and up-to-date
-To reinstall 1.8.6, run `brew reinstall composer`
-Deciano:~ cypriannwosu$ brew reinstall composer
-==> Reinstalling composer 
-==> Downloading https://getcomposer.org/download/1.8.6/composer.phar
-Already downloaded: /Users/cypriannwosu/Library/Caches/Homebrew/downloads/4e88dac5239d403f3be965ee40f9b326341afcc0211820f6b08146dde2fecf31--composer.phar
-🍺  /usr/local/Cellar/composer/1.8.6: 3 files, 1.8MB, built in 3 seconds
-Deciano:~ cypriannwosu$ php -v
-PHP 7.3.7 (cli) (built: Jul  5 2019 12:44:05) ( NTS )
-Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.3.7, Copyright (c) 1998-2018 Zend Technologies
-    with Zend OPcache v7.3.7, Copyright (c) 1999-2018, by Zend Technologies
-Deciano:etc cypriannwosu$ cd apache2
-Deciano:apache2 cypriannwosu$ ls
-extra			httpd.conf.pre-update	mime.types		other
-httpd.conf		magic			original		users
-Deciano:apache2 cypriannwosu$ nano httpd.conf
-Deciano:apache2 cypriannwosu$ nano httpd.conf
-Deciano:apache2 cypriannwosu$ nano httpd.conf
-Deciano:apache2 cypriannwosu$ sudo cp httpd.conf
-Password:
-usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
-       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory
-Deciano:apache2 cypriannwosu$ sudo cp httpd.conf httpd.conf-backup-20190717
-Deciano:apache2 cypriannwosu$ apache status
--bash: apache: command not found
-Deciano:apache2 cypriannwosu$ ls
-extra				httpd.conf.pre-update		original
-httpd.conf			magic				other
-httpd.conf-backup-20190717	mime.types			users
-Deciano:apache2 cypriannwosu$ LoadModule php7_module /usr/local/opt/php/lib/httpd/modules/libphp7.so
--bash: LoadModule: command not found
-Deciano:apache2 cypriannwosu$ 
-Deciano:apache2 cypriannwosu$     <FilesMatch \.php$>
--bash: syntax error near unexpected token `newline'
-Deciano:apache2 cypriannwosu$ sudo nano httpd.conf
-Password:
-
-	# In the file, uncomment the line:
-	#	LoadModule php7_module libexec/apache2/libphp7.so
-	#
-	# Add the following lines to the end of the file:
-	#	<FilesMatch \.php$>
-        #		SetHandler application/x-httpd-php
-    	#	</FilesMatch>
-	#
-	# Find line
-	#	DirectoryIndex index.html
-	# and replace with line
-	#	DirectoryIndex index.php index.html
-	#
-	# Save and exit file, then, restart Apache
-
-Deciano:apache2 cypriannwosu$ sudo apachectl restart
-Deciano:apache2 cypriannwosu$ brew install httrack
-Updating Homebrew...
-==> Downloading https://homebrew.bintray.com/bottles/httrack-3.49.2.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/85/8542fa3b1a4badf7290315b4174d5026c81e79c5add754321
-######################################################################## 100.0%
-==> Pouring httrack-3.49.2.mojave.bottle.tar.gz
-🍺  /usr/local/Cellar/httrack/3.49.2: 235 files, 4MB
-
-Deciano:.composer cypriannwosu$ homebrew install mysql
--bash: homebrew: command not found
-Deciano:.composer cypriannwosu$ brew install mysql
-Updating Homebrew...
-==> Downloading https://homebrew.bintray.com/bottles/mysql-8.0.16.mojave.bottle.tar.gz
-==> Downloading from https://akamai.bintray.com/65/65e6629740ca75ceaae575b4cc68f2cf133619d08cdcd4cb2
-######################################################################## 100.0%
-==> Pouring mysql-8.0.16.mojave.bottle.tar.gz
-==> /usr/local/Cellar/mysql/8.0.16/bin/mysqld --initialize-insecure --user=cypriannwosu --basedir=/u
-==> Caveats
-We've installed your MySQL database without a root password. To secure it run:
-    mysql_secure_installation
-
-MySQL is configured to only allow connections from localhost by default
-
-To connect run:
-    mysql -uroot
-
-To have launchd start mysql now and restart at login:
-  brew services start mysql
-Or, if you don't want/need a background service you can just run:
-  mysql.server start
-==> Summary
-🍺  /usr/local/Cellar/mysql/8.0.16: 275 files, 269.8MB
-Deciano:.composer cypriannwosu$ brew services start mysql
-==> Tapping homebrew/services
-Cloning into '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-services'...
-remote: Enumerating objects: 12, done.
-remote: Counting objects: 100% (12/12), done.
-remote: Compressing objects: 100% (9/9), done.
-remote: Total 12 (delta 0), reused 7 (delta 0), pack-reused 0
-Unpacking objects: 100% (12/12), done.
-Tapped 1 command (41 files, 58.8KB).
-==> Successfully started `mysql` (label: homebrew.mxcl.mysql)
-Deciano:.composer cypriannwosu$ mysql_secure_installation
-
-Securing the MySQL server deployment.
-
-Connecting to MySQL using a blank password.
-
-VALIDATE PASSWORD COMPONENT can be used to test passwords
-and improve security. It checks the strength of password
-and allows the users to set only those passwords which are
-secure enough. Would you like to setup VALIDATE PASSWORD component?
-
-Press y|Y for Yes, any other key for No: n
-Please set the password for root here.
-
-New password: 
-
-Re-enter new password: 
-Sorry, passwords do not match.
-
-New password: 
-
-Re-enter new password: 
-By default, a MySQL installation has an anonymous user,
-allowing anyone to log into MySQL without having to have
-a user account created for them. This is intended only for
-testing, and to make the installation go a bit smoother.
-You should remove them before moving into a production
-environment.
-
-Remove anonymous users? (Press y|Y for Yes, any other key for No) : y
-Success.
-
-
-Normally, root should only be allowed to connect from
-'localhost'. This ensures that someone cannot guess at
-the root password from the network.
-
-Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
-Success.
-
-By default, MySQL comes with a database named 'test' that
-anyone can access. This is also intended only for testing,
-and should be removed before moving into a production
-environment.
-
-
-Remove test database and access to it? (Press y|Y for Yes, any other key for No) : y
- - Dropping test database...
-Success.
-
- - Removing privileges on test database...
-Success.
-
-Reloading the privilege tables will ensure that all changes
-made so far will take effect immediately.
-
-Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
-Success.
-
-	# To be able to run NodeJS apps,
-	# Install MongoDB
-
-Deciano:.composer cypriannwosu$ brew tap mongodb/brew
-
-Deciano:.composer cypriannwosu$ brew install mongodb-community@4.2
-
-Deciano:.composer cypriannwosu$ brew services start mongodb-community@4.2
-
-All done! 
-Deciano:.composer cypriannwosu$ 
-
-	# ADDITIONAL SETUP:
-	#
-	# See Notes on "HOW TO..." (customize Terminal, etc) in mac-ops.txt
-	#
+Java & Threads
+Threads are essentially subprocesses1: informally, we can think of them as tasks that run "simultaneously" within a program. For example, a web server application may have a number of threads running at a given time, each responding to a different web page request. A graphics rendering application may have different threads running, each rendering a different portion of an image. A strategy game might have multiple threads running, each exploring different potential moves for an AI player to make.
+
+When multiple threads are in process, the computer's operating system and processor(s) between them determine how to actually distribute the threads among the available CPU resources. If precisely two threads are running and there are two CPU cores available, then in principle, the threads can literally run simultaneously, one on each core. But the reality is usually muchg more complex:
+
+there will usually be a large number of threads competing for a small number of shared resources (CPU cores, memory, even specific components of a given CPU core...);
+at a given moment in time, a thread that is "running" may actually not be able to progress because it is waiting for some resource to become available (e.g. data from a particular source, a lock on a particular file etc).
+This complex process of allocating threads to available resources is generally termed thread scheduling.
+
+Allocating threads to available CPU resources is complex in part because of the complexity of modern computer architectures, which are increasingly designed around allowing mutliple processes to run in parallel. But the converse is therefore true: if your program doesn't make use of threads in some way, it is likely that you will not be able to make maximum use of the available computing resources.
+
+
+
+Java threading APIs
+Like modern programming languages generally, Java has a range of APIs available for managing threads within your application:
+
+The Thread class, along with associated interfaces and classes such as Runnable, provide the lowest level API that the programmer generally needs to deal with. This API provides simple thread methods allowing you to deal with threads in broad terms: starting them; defining the task they will run; telling the current thread to "sleep"; interrupting a thread; setting a thread's priority etc. This API does not define thread tasks in terms of logical concepts such as jobs, queues, time limits etc.
+The Java executor framework allows threads and their tasks to be defined in more "logical", higher-level terms (e.g. "tasks" are "scheduled" or added to queues).
+The Java Stream API provides a means to "process a collection of objects in parallel".
+Getting started with the Java threading API
+It's easier to illustrate what a thread is by diving straight in and seeing some code. We're going to write a program that "splits itself" into two simultaneous tasks. One task is to print Hello, world! every second. The other task is to print Goodbye, cruel world! every two seconds. OK, it's a silly example.
+
+For them to run simultaneously, each of these two tasks will run in a separate thread. To define a "task", we create an instance of Runnable. Then we will wrap each of these Runnables around a Thread object.
+
+Runnable
+A Runnable object defines an actual task that is to be executed. It doesn't define how it is to be executed (serial, two at a time, three at a time etc), but just what. We can define a Runnable as follows:
+
+Runnable r = new Runnable() {
+  public void run() {
+    ... code to be executed ...
+  }
+};
+Runnable is actually an interface, with the single run() method that we must provide. In our case, we want the Runnable.run() methods of our two tasks to print a message periodically. So here is what the code could look like:
+
+Runnable r1 = new Runnable() {
+  public void run() {
+    try {
+      while (true) {
+        System.out.println("Hello, world!");
+        Thread.sleep(1000L);
+      }
+    } catch (InterruptedException iex) {}
+  }
+};
+Runnable r2 = new Runnable() {
+  public void run() {
+    try {
+      while (true) {
+        System.out.println("Goodbye, " +
+		"cruel world!");
+        Thread.sleep(2000L);
+      }
+    } catch (InterruptedException iex) {}
+  }
+};
+For now, we'll gloss over a couple of issues, such as how the task ever stops. As you've probably gathered, the Thread.sleep() method essentially "pauses" for the given number of milliseconds, but could get "interrupted", hence the need to catch InterruptedException. We'll come back to this in more detail in the section on Thread interruption and InterruptedException. The most important point for now is that with the Runnable() interface, we're just defining what the two tasks are. We haven't actually set them running yet. And that's where the Thread class comes in...
+
+Thread
+A Java Thread object wraps around an actual thread of execution. It effectively defines how the task is to be executed— namely, at the same time as other threads2. To run the above two tasks simultaneously, we create a Thread object for each Runnable, then call the start() method on each Thread:
+
+Thread thr1 = new Thread(r1);
+Thread thr2 = new Thread(r2);
+thr1.start();
+thr2.start();
+When we call start(), a new thread is spawned, which will begin executing the task that was assigned to the Thread object at some time in the near future. Meanwhile, control returns to the caller of start(), and we can start the second thread. Once that starts, we'll actually have at least three threads now running in parallel: the two we've just started, plus the "main" thread from which we created and started the two others. (In reality, the JVM will tend to have a few extra threads running for "housekeeping" tasks such as garbage collection, although they're essentially outside of our program's control.)
+
+Next: threading topics
+On the next page, we look at the following Java threading topics:
+
+Constructing a thread: different ways for constructing a task and/or thread, and which to use when;
+thread control methods provided by the Thread class;
+thread interruption: a mechanism for "waking a thread up" early from a blocking call;
+stopping a thread: looking at how to stop a thread in Java;
+Threads with Swing: how to correctly uses threads in a GUI-enabled application, including a look at the key method SwingUtilities.invokeLater();
+How threads work: more details about what a thread actually is, how threads are implemented by the OS, and how thread scheduling affects Java, looking at issues such as limits on thread control methods, how to avoid thread overhead and lock contention;
+Thread scheduling: a look at the component of the OS which manages "juggling" threads among the available CPUs;
+coordinating threads with a CountDownLatch;
+Thread safety: an overview of data synchronization and visibility issues that occur in multithreaded programming;
+Thread pools in Java: introducing the ThreadPoolExecutor class and associated utility classes and methods;
+we describe the problem of deadlock, where two threads cannot advance as they each are holding resources the other needs to proceed; and of course, we look at how to prevent deadlock;
+thread coordination with CyclicBarrier, incuding the example of a parallal sort algorithm.
+1. A process is essentially a "heavy" unit of multitasking: as an approximation, think of it as an "application" (though it can include 'background' or 'system' processes such a your battery monitor or file indexer). A thread, on the other hand, is a more "lightweight" unit. Different processes generally have certain resources allocated independently of one another (such as address space, file handle allocations), whereas a threads generally share the resources of their parent process.
+2. We'll see later that the Thread object also encapsulates other details, such as a thread's priority.
 
+Stack Overflow
+Products
+Search…
+
+NwosuCC
+56
+, 56 reputation
+●66 bronze badges
+Home
+PUBLIC
+Stack Overflow
+Tags
+Users
+Jobs
+TEAMS
+What’s this?
+First 10 Free
+Docker: Mounts denied. The paths … are not shared from OS X and are not known to Docker
+Ask Question
+Asked 2 years, 2 months ago
+Active 7 months ago
+Viewed 46k times
+
+
+73
+
+
+14
+The command docker run -v /var/folders/zz/... produces the following error.
+
+docker: Error response from daemon: Mounts denied:
+The paths /var/folders/zz/... and /var/folders/zz/...
+are not shared from OS X and are not known to Docker.
+You can configure shared paths from Docker -> Preferences... -> File Sharing.
+When I do open File Sharing, I see that /private is listed already.
+
+If I attempt to add /var/folder/, it resolves to /private/var/folders, which is a subset of /private and hence the addition is rejected.
+
+To summarize, it looks to me like the directory /var/folders/.. is shared by OS X as a subdirectory of /private and hence must be known to Docker. Any help on resolving this would be appreciated.
+
+As an experiment, I replaced the /private in File Sharing with /private/var/folders and restarted the docker but the result did not change.
+
+Just for a more complete reference, this is the .sh script, which runs this python script, which in turn runs the docker command.
+
+macos docker docker-for-mac
+shareeditflag
+edited Feb 15 at 23:53
+
+D. Schreier
+85499 silver badges2525 bronze badges
+asked Jul 15 '17 at 20:28
+
+Aayush
+49811 gold badge44 silver badges99 bronze badges
+2
+
+Did you try -v /private/var/folders/zz/... ? – Dan Lowe Jul 15 '17 at 20:34
+
+@DanLowe: I had not, because the code went like WORKING_DIR="$(mktemp -d) and, -v ${WORKING_DIR}. But hacking that to WORKING_DIR="/private"$(mktemp -d), seems to resolve the issue. Thank you so much :) – Aayush Jul 15 '17 at 21:05
+
+I'll post an answer explaining why it worked when I get a few minutes – Dan Lowe Jul 15 '17 at 21:07
+
+That'd be great, thanks again. – Aayush Jul 15 '17 at 21:20
+add a comment
+2 Answers
+activeoldestvotes
+
+85
+
+Docker for Mac volume mounts behave differently than the base Docker system. This is mostly because Docker tries to comply with Apple's filesystem sandbox guidelines.
+
+As shown in Docker's preferences, only certain paths are exported by macOS.
+
+/Users
+/Volumes
+/tmp
+/private
+File Sharing preference panel
+
+/var in macOS is a symbolic link into /private. That is also true for /tmp:
+
+$ ls -ld /tmp /var
+lrwxr-xr-x@ 1 root  wheel  11 Jan 26 16:18 /tmp -> private/tmp
+lrwxr-xr-x@ 1 root  wheel  11 Jan 26 16:18 /var -> private/var
+Why is /tmp listed in the sharing panel, but /var is not (even though both are a part of /private)? Docker for Mac's documentation about filesystem namespaces explains:
+
+By default, you can share files in /Users/, /Volumes/, /private/, and /tmp directly. To add or remove directory trees that are exported to Docker, use the File sharing tab in Docker preferences whale menu -> Preferences -> File sharing. (See Preferences.)
+
+All other paths used in -v bind mounts are sourced from the Moby Linux VM running the Docker containers, so arguments such as -v /var/run/docker.sock:/var/run/docker.sock should work as expected. If a macOS path is not shared and does not exist in the VM, an attempt to bind mount it will fail rather than create it in the VM. Paths that already exist in the VM and contain files are reserved by Docker and cannot be exported from macOS.
+
+Note that /var/run is specifically mentioned here as a place that would be mounted from the Linux VM, instead of from macOS.
+
+When you ask for a volume mount, macOS filesystem exports are checked first. If there is no match there, the Linux VM where Docker is running is checked next. If neither of them have the path you requested, then the mount fails.
+
+In your case, /var is not exported by macOS. /var exists in the Linux VM, but /var/folders does not. Therefore, the path is not available, and the mount fails.
+
+If you change the path to /private/var, then it will succeed, because macOS exports the entire /private filesystem tree for mounting.
+
+In order to make things more portable, you may want to test which platform you are currently running on, and if it's macOS, prefix the mount path with /private.
+
+shareeditflag
+answered Jul 15 '17 at 21:56
+
+Dan Lowe
+27.2k1212 gold badges7676 silver badges8282 bronze badges
+4
+
+@SamuelMéndez Just the first one. The format is mac-path:container-path, and /private would only exist on the Mac side of it. – Dan Lowe Sep 7 '17 at 13:33
+2
+
+I facing similar issue can anyone help me to resolve ("b'Mounts denied: \r\nThe path /etc/localtime\r\nis not shared from OS X and is not known to Docker.\r\nYou can configure shared paths from Docker -> Preferences... -> File Sharing.\r\nSee docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.\r\n.'") tried adding /etc via Docker -> Preferences... -> File Sharing it says /etc is reserved for mac os any solutions guys? – Sandish Kumar H N Feb 13 '18 at 5:43
+1
+
+@DanLowe Thanks for the response. If I try to add /private/etc/localtime is throwing "The export path /private/etc/localtime overlaps with the export path /private." I tired adding "/etc/localtime" but got new error it says "APIError: 500 Server Error: Internal Server Error ("error while creating mount source path '/etc/localtime': mkdir /etc/localtime: file exists")" Any Idea?? – Sandish Kumar H N Feb 13 '18 at 15:40
+2
+
+Let us continue this discussion in chat. – Sandish Kumar H N Feb 13 '18 at 16:56
+1
+
+@DanLowe Thank you for your kind answer. I understand you. When we develop on Mac OS, deploy on Ubuntu. We use docker-compose to volume /etc/localtime. Are we gonna check the system and set different path? Like /private/etc/localtime for mac os, /etc/localtime for ubuntu. How to tell the system info in Docker-compose.yml? Thank you! – hzwzw Sep 1 '18 at 17:58
+add a comment  |  show 7 more comments
+
+2
+
+As an example, using Portainer, this command works for me:
+
+docker run -d --restart unless-stopped -p 9000:9000 \
+ -v /var/run/docker.sock:/var/run/docker.sock \
+ -v /var:/data portainer/portainer --no-auth
+But, if I vary the -v /var:/data at all, it won't work. I think (but not sure) that its because Docker is trying to do a mkdir. So, if I try to mount -v /var/whatever:/data, mkdir fails because not enough permission, and it doesn't work.
+
+I have 2 Mac's (High Sierra) and I tried it on both. Same problem. Also, I tried using Docker Beta channel. I think I understand Dan Lowe's answer: I'll update this answer if that works for me.
+
+shareeditflag
+edited Apr 18 '18 at 16:10
+answered Apr 14 '18 at 2:42
+
+djangofan
+16.6k4949 gold badges152152 silver badges243243 bronze badges
+add a comment
+Your Answer
+Links Images Styling/Headers Lists Blockquotes Code HTMLadvanced help »
+
+community wiki
+Post Your Answer
+Not the answer you're looking for? Browse other questions tagged macos docker docker-for-mac or ask your own question.
+Blog
+Einstein Analytics and Go
+Adding Static Code Analysis to Stack Overflow
+Featured on Meta
+Unicorn Meta Zoo #9: How do we handle problem users?
+An apology to our community, and next steps
+Threshold experiment results: closing, editing and reopening all become more…
+
+Remote jobs
+Site Reliability Engineer (Core Platform Team)
+Wikimedia Foundation, Inc.No office location
+REMOTE
+phplinux
+Frontend Developer Shopware (m/w/d) - REMOTE
+signundsinn GmbHNo office location
+REMOTE
+htmlcss
+Senior NodeJS Software Engineer
+Namaste TechnologiesNo office location
+$40K - $75KREMOTE
+javascripttypescript
+Elasticsearch Engineer - PHP
+Browzzin Pte LtdNo office location
+$40K - $60KREMOTE
+phpjavascript
+Linked
+4
+Cannot start service mount denied '/usr/local/share/dotnet/sdk/NuGetFallbackFolder\r\n' is not share from macos X and is not know to docker
+2
+serving Django static files with Docker, nginx and gunicorn
+0
+postgres and mysql mounts denied docker
+0
+Mounts denied: The paths /var and /var/x are not shared from OS X and are not known to Docker
+0
+Relative path binding in docker for volumes in macOS does fail
+0
+Docker: Unable to start docker images/ unable to add path /etc/<folder_name>
+Related
+3464
+How is Docker different from a virtual machine?
+1178
+How to get a Docker container's IP address from the host?
+1355
+Copying files from Docker container to host
+1336
+Copying files from host to Docker container
+533
+How to mount a host directory in a Docker container
+1122
+How to copy Docker images from one host to another without using a repository
+340
+How to include files outside of Docker's build context?
+0
+mounting docker for shared path
+0
+Mounts denied: The paths /var and /var/x are not shared from OS X and are not known to Docker
+0
+Docker error: Error response from daemon: Mounts denied: on OS X
+Hot Network Questions
+Code Golf Measurer © 2019
+A Physics Question on Constant Acceleration
+Do more Americans want the Bidens investigated than Trump impeached?
+Can digital computers understand infinity?
+Easy way of generating a 50-150W load @12V
+How does Firefox know my ISP login page?
+Why does Sonny say they call Michael "Giogali"?
+Is Schrodinger's Cat itself an observer?
+A man condemned to serve his sentence in other times
+Usefulness of Nash embedding theorem
+Any way to see "cubic-active" vibrational modes in molecules?
+What power does the UK parliament hold over a Prime Minister whom they refuse to remove from power?
+Why is technology bad for children?
+How can a "proper" function have a vertical slope?
+How to treat unhandled exceptions? (Terminate the application vs. Keep it alive)
+Incorrect mmap behavior when assembly files included in the project
+First author doesn't want a co-author to read the whole paper
+A fast aquatic predator with multiple eyes and pupils. Would these eyes be possible?
+If we should encrypt the message rather than the method of transfer, why do we care about wifi security? Is this just security theatre?
+On what Apple II and II+ keyboards can the `]` character be generated?
+What are some non-CS concepts that can be defined using BNF notation?
+How can I communicate feelings to players without impacting their agency?
+Why should be velocity through the nozzle throat be sonic?
+Interpret a date from a string of digits
+ Question feed
+
+STACK OVERFLOW
+Questions
+Jobs
+Developer Jobs Directory
+Salary Calculator
+Help
+Mobile
+Disable Responsiveness
+PRODUCTS
+Teams
+Talent
+Advertising
+Enterprise
+COMPANY
+About
+Press
+Work Here
+Legal
+Privacy Policy
+Contact Us
+STACK EXCHANGE
+NETWORK
+Technology
+Life / Arts
+Culture / Recreation
+Science
+Other
+Blog
+Facebook
+Twitter
+LinkedIn
+site design / logo © 2019 Stack Exchange Inc; user contributions licensed under cc by-sa 4.0 with attribution required. rev 2019.10.7.35131
+
+Accessibility links
+Skip to main contentAccessibility help
+Accessibility feedback
+Google
+Mounts denied: The path /api-ccountries is not shared from OS X and is not known to Docker
+
+About 277,000 results (0.74 seconds)
+Did you mean: Mounts denied: The path /api-countries is not shared from OS X and is not known to Docker
+
+Search Results
+Web results
+Docker: Mounts denied. The paths ... are not shared from OS X ...
+
+https://stackoverflow.com › questions › docker-mounts-denied-the-paths-a...
+2 answers
+Apr 14, 2018 - Docker for Mac volume mounts behave differently than the base Docker system. This is mostly because Docker tries to comply with Apple's ...
+Missing: ccountries ‎| ‎Must include: ‎ccountries
+Mounts Denied Issue Starting Docker Compose · Issue #162 ...
+
+https://github.com › zulip › docker-zulip › issues
+Oct 22, 2018 - I am running Docker Version 18.03.1-ce-mac65 (24312) on MacOS Sierra ... -denied-the-paths-are-not-shared-from-os-x-and-are-not-known ...
+Missing: ccountries ‎| ‎Must include: ‎ccountries
+The path is not shared from OS X and is not known to Docker ...
+
+https://github.com › localstack › localstack › issues
+Nov 23, 2017 - The path is not shared from OS X and is not known to Docker. #480. Closed ... docker: Error response from daemon: Mounts denied: The path ...
+Missing: ccountries ‎| ‎Must include: ‎ccountries
+Mac File Sharing Connection Failed - The Lake Country ...
+
+https://lakecountryweekender.com › fj=mac-file-sharing-connection-failed
+The easiest way to share files from Mac OS X to Windows is to enable Samba ... write access to Samba shares is denied, even if write access is configured in ... With Apple blocking file managers, it means no more access to apps, file's ... The third configuration item allows you to turn on the so called 'Public' folder sharing.
+Docker Container time & timezone (will not reflect changes ...
+
+https://serverfault.com › questions › docker-container-time-timezone-will-...
+9 answers
+Anyone know what gives? ... ENV TZ=America/Los_Angeles RUN ln -snf /usr/share/zoneinfo/$TZ ... RUN apk add --no-cache tzdata ENV TZ America/Los_Angeles ... Usually it is sufficient to set an environment variable in the docker container, like ... Mounting /etc/localtime in the image, so it is in sync with host -v is the most ...
+Nordvpn Docker Container
+
+normandywms.com › horj › iulyzt › ok=nordvpn-docker-container
+No matter if just the Docker-Plugin or the containers itself. ... Build and test Linux and Windows applications and easily share them with others, ... such as cross-repository blob mounting and image layer rebasing on Docker v2 API registries. .... Fast Servers in 94 Countries. ... Container Host: Also called the Host OS.
+Helm |
+
+https://helm.sh › docs › using_helm
+However, if your cluster is exposed to a larger network or if you share your cluster with ... By default, when Tiller is installed, it does not have authentication enabled. .... helm init --node-selectors "beta.kubernetes.io/os"="linux" .... k8s api server container (kubelet will recreate it) 4) Then systemctl restart docker (or reboot the ...
+date - Docker Container time & timezone (will not reflect changes ...
+
+https://serverfault.daytorrents.com › ...
+9 answers
+Anyone know what gives? ... ENV TZ=America/Los_Angeles RUN ln -snf /usr/share/zoneinfo/$TZ ... RUN apk add --no-cache tzdata ENV TZ America/Los_Angeles ... Mounting /etc/localtime in the image, so it is in sync with host -v is the most popular ... Data volume /config dockerfile, localized to a specific country or region:.
+Docker windows etc localtime
+
+pelayanansosial.com › sdhtjfgv3=docker-windows-etc-localtime
+But for some reason, why I tell the docker to look at that path, it does not ... It runs faster and has eliminated the occasional timeout with homekit api. ... docker pull brewpi/brewpi-ubuntu. io, Firefox, Chrome and XVFB. country. .... Mounts denied: The path /etc/localtime is not shared from OS X and is not known to Docker.
+Deluge Docker Not Downloading - Fée O'Poil
+
+feeopoil.fr › oonm › ph=deluge-docker-not-downloading
+Deluge is a full-featured BitTorrent client for Linux, OS X, Unix and Windows. ... created with docker-machine, but volume mounting and port forwarding do not work the ... Docker users should be aware that the code responsible for downloading ... and notice some of author may have lock the live reading for some of country.
+Searches related to Mounts denied: The path /api-ccountries is not shared from OS X and is not known to Docker
+the path dev bus usb is not shared from os x and is not known to docker
+
+docker mounts denied eof
+
+the path /etc/localtime is not shared from os x and is not known to docker.
+
+the path docker volumes mayan edms postgres is not shared from os x and is not known to docker
+
+docker compose mounts denied eof
+
+docker mac os mounts denied
+
+docker error response from daemon mounts denied the path srv gitlab runner config
+
+b'mounts denied: eof'
+
+Page navigation
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Next
+Footer links
+NigeriaAnthony Village, Lagos - From your Internet address - Use precise location - Learn more
+HelpSend feedbackPrivacyTerms
+
+Accessibility links
+Skip to main contentAccessibility help
+Accessibility feedback
+Google
+Mounts denied: The path /api-ccountries is not shared from OS X and is not known to Docker
+
+About 277,000 results (0.74 seconds)
+Did you mean: Mounts denied: The path /api-countries is not shared from OS X and is not known to Docker
+
+Search Results
+Web results
+Docker: Mounts denied. The paths ... are not shared from OS X ...
+
+https://stackoverflow.com › questions › docker-mounts-denied-the-paths-a...
+2 answers
+Apr 14, 2018 - Docker for Mac volume mounts behave differently than the base Docker system. This is mostly because Docker tries to comply with Apple's ...
+Missing: ccountries ‎| ‎Must include: ‎ccountries
+Mounts Denied Issue Starting Docker Compose · Issue #162 ...
+
+https://github.com › zulip › docker-zulip › issues
+Oct 22, 2018 - I am running Docker Version 18.03.1-ce-mac65 (24312) on MacOS Sierra ... -denied-the-paths-are-not-shared-from-os-x-and-are-not-known ...
+Missing: ccountries ‎| ‎Must include: ‎ccountries
+The path is not shared from OS X and is not known to Docker ...
+
+https://github.com › localstack › localstack › issues
+Nov 23, 2017 - The path is not shared from OS X and is not known to Docker. #480. Closed ... docker: Error response from daemon: Mounts denied: The path ...
+Missing: ccountries ‎| ‎Must include: ‎ccountries
+Mac File Sharing Connection Failed - The Lake Country ...
+
+https://lakecountryweekender.com › fj=mac-file-sharing-connection-failed
+The easiest way to share files from Mac OS X to Windows is to enable Samba ... write access to Samba shares is denied, even if write access is configured in ... With Apple blocking file managers, it means no more access to apps, file's ... The third configuration item allows you to turn on the so called 'Public' folder sharing.
+Docker Container time & timezone (will not reflect changes ...
+
+https://serverfault.com › questions › docker-container-time-timezone-will-...
+9 answers
+Anyone know what gives? ... ENV TZ=America/Los_Angeles RUN ln -snf /usr/share/zoneinfo/$TZ ... RUN apk add --no-cache tzdata ENV TZ America/Los_Angeles ... Usually it is sufficient to set an environment variable in the docker container, like ... Mounting /etc/localtime in the image, so it is in sync with host -v is the most ...
+Nordvpn Docker Container
+
+normandywms.com › horj › iulyzt › ok=nordvpn-docker-container
+No matter if just the Docker-Plugin or the containers itself. ... Build and test Linux and Windows applications and easily share them with others, ... such as cross-repository blob mounting and image layer rebasing on Docker v2 API registries. .... Fast Servers in 94 Countries. ... Container Host: Also called the Host OS.
+Helm |
+
+https://helm.sh › docs › using_helm
+However, if your cluster is exposed to a larger network or if you share your cluster with ... By default, when Tiller is installed, it does not have authentication enabled. .... helm init --node-selectors "beta.kubernetes.io/os"="linux" .... k8s api server container (kubelet will recreate it) 4) Then systemctl restart docker (or reboot the ...
+date - Docker Container time & timezone (will not reflect changes ...
+
+https://serverfault.daytorrents.com › ...
+9 answers
+Anyone know what gives? ... ENV TZ=America/Los_Angeles RUN ln -snf /usr/share/zoneinfo/$TZ ... RUN apk add --no-cache tzdata ENV TZ America/Los_Angeles ... Mounting /etc/localtime in the image, so it is in sync with host -v is the most popular ... Data volume /config dockerfile, localized to a specific country or region:.
+Docker windows etc localtime
+
+pelayanansosial.com › sdhtjfgv3=docker-windows-etc-localtime
+But for some reason, why I tell the docker to look at that path, it does not ... It runs faster and has eliminated the occasional timeout with homekit api. ... docker pull brewpi/brewpi-ubuntu. io, Firefox, Chrome and XVFB. country. .... Mounts denied: The path /etc/localtime is not shared from OS X and is not known to Docker.
+Deluge Docker Not Downloading - Fée O'Poil
+
+feeopoil.fr › oonm › ph=deluge-docker-not-downloading
+Deluge is a full-featured BitTorrent client for Linux, OS X, Unix and Windows. ... created with docker-machine, but volume mounting and port forwarding do not work the ... Docker users should be aware that the code responsible for downloading ... and notice some of author may have lock the live reading for some of country.
+Searches related to Mounts denied: The path /api-ccountries is not shared from OS X and is not known to Docker
+the path dev bus usb is not shared from os x and is not known to docker
+
+docker mounts denied eof
+
+the path /etc/localtime is not shared from os x and is not known to docker.
+
+the path docker volumes mayan edms postgres is not shared from os x and is not known to docker
+
+docker compose mounts denied eof
+
+docker mac os mounts denied
+
+docker error response from daemon mounts denied the path srv gitlab runner config
+
+b'mounts denied: eof'
+
+Page navigation
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Next
+Footer links
+NigeriaAnthony Village, Lagos - From your Internet address - Use precise location - Learn more
+HelpSend feedbackPrivacyTerms
